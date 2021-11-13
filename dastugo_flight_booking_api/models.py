@@ -31,9 +31,12 @@ class Passenger(models.Model):
         return f"{self.last_name} {self.first_name}"
 
 class Reservation(models.Model):
-	flight = models.ForeignKey(FlightDescription,on_delete=models.CASCADE)
-	passenger = models.OneToOneField(Passenger,on_delete=models.CASCADE)
-
+    flight = models.ForeignKey(FlightDescription,on_delete=models.CASCADE)
+    passenger = models.OneToOneField(Passenger,on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return f"{self.flight} {self.passenger}"
+    
 # @receiver(post_save,sender=settings.AUTH_USER_MODEL)
 # def createAuthToken(sender,instance,created,**kwargs):
 # 	if created:
