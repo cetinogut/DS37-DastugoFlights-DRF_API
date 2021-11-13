@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    #myapps
+    'dastugo_flight_booking_api',
 ]
 
 MIDDLEWARE = [
