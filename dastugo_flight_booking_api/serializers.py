@@ -13,6 +13,7 @@ class PassengerSerializer(serializers.ModelSerializer):
         fields = '__all__'
         
 class ReservationSerializer(serializers.ModelSerializer):
+    
     class Meta:
         model = Reservation
         fields = '__all__'
